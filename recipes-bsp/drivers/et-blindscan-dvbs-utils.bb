@@ -8,7 +8,7 @@ SRC_URI = "https://github.com/OpenPLi-meta/meta-xtrend/releases/download/Binarie
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
 PROVIDES += "virtual/blindscan-dvbs"
-RPROVIDES_${PN} += "virtual/blindscan-dvbs"
+RPROVIDES:${PN} += "virtual/blindscan-dvbs"
 
 PV = "1.1"
 PR = "r9"

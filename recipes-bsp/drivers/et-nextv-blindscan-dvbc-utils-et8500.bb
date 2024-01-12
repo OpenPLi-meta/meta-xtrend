@@ -8,7 +8,7 @@ PACKAGE_ARCH = "${MACHINE_ARCH}"
 SRC_URI = "https://github.com/OpenPLi-meta/meta-xtrend/releases/download/Binaries-1.0/et8500-dvbc-blindscan-1.6.zip"
 
 PROVIDES += "virtual/blindscan-dvbc"
-RPROVIDES_${PN} += "virtual/blindscan-dvbc"
+RPROVIDES:${PN} += "virtual/blindscan-dvbc"
 
 PV = "1.6"
 PR = "r2"

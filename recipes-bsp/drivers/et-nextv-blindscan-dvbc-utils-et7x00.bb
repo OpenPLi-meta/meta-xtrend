@@ -5,7 +5,7 @@ LICENSE = "CLOSED"
 
 PACKAGE_ARCH = "${MACHINE_ARCH}"
 
-SRC_URI = "https://github.com/OpenPLi-meta/meta-xtrend/releases/download/Binaries-1.0/et7x00-dvbc-blindscan-1.6.zip"
+SRC_URI = "http://downloads.openpli.org/archive/xtrend/et7x00-dvbc-blindscan-1.6.zip"
 
 PROVIDES += "virtual/blindscan-dvbc"
 RPROVIDES_${PN} += "virtual/blindscan-dvbc"

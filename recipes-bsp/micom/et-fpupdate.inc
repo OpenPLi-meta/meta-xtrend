@@ -8,8 +8,8 @@ PACKAGE_ARCH := "${MACHINE_ARCH}"
 PR = "r5"
 
 SRC_URI = " \
-	http://downloads.mutant-digital.net/xtrend/fpupdate-${FPUPDATE}.zip \
-	http://downloads.mutant-digital.net/xtrend/${MACHINE}/avrmain-${MACHINE}-${PV}.zip;name=avrmain \
+	http://downloads.openpli.org/archive/xtrend/fpupdate-${FPUPDATE}.zip \
+	http://downloads.openpli.org/archive/xtrend/${MACHINE}/avrmain-${MACHINE}-${PV}.zip;name=avrmain \
 	"
 
 S = "${WORKDIR}"

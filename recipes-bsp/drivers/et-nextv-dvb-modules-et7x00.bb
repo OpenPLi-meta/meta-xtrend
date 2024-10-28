@@ -2,7 +2,7 @@ KV = "4.4.8"
 SRCDATE = "20170424"
 GCC = "6.3.0"
 
-SRC_URI = "https://github.com/OpenPLi-meta/meta-xtrend/releases/download/Binaries-1.0/${MACHINE}-drivers-${KV}-${GCC}-${SRCDATE}.zip"
+SRC_URI = "http://downloads.openpli.org/archive/xtrend/${MACHINE}-drivers-${KV}-${GCC}-${SRCDATE}.zip"
 
 require et-nextv-dvb-modules.inc
 

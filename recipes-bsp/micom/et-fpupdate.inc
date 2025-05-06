@@ -3,7 +3,7 @@ SECTION = "base"
 PRIORITY = "optional"
 LICENSE = "CLOSED"
 
-PACKAGE_ARCH := "${MACHINE_ARCH}"
+PACKAGE_ARCH = "${MACHINE_ARCH}"
 
 PR = "r5"
 

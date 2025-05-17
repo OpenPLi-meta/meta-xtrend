@@ -41,11 +41,10 @@ IMAGEVERSION[vardepsexclude] = "DATE"
 IMAGEDIR ?= "${MACHINE}"
 IMGDEPLOYDIR ?= "${DEPLOY_DIR_IMAGE}"
 
-# MIPSEL
 IMAGE_CMD:ubifs:prepend = " \
-    rm -Rf ${IMAGE_ROOTFS}/boot/*; \
-    rm -Rf ${IMAGE_ROOTFS}/tmp/*; \
-    "
+	rm -rf ${IMAGE_ROOTFS}/boot/*; \
+	rm -rf ${IMAGE_ROOTFS}/tmp/*; \
+	"
 
 IMAGE_CMD:ubi:append = " \
 	mkdir -p ${IMGDEPLOYDIR}/${IMAGEDIR}; \

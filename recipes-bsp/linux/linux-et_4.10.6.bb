@@ -24,6 +24,8 @@ SRC_URI = "http://downloads.openpli.org/archive/xtrend/linux-${PV}-${ARCH}.tar.g
 	file://0001-genet1-1000mbit.patch \
 	file://bcmgenet_phyaddr.patch \
 	file://defconfig \
+    file://fix-never-be-null_outside-array-bounds-gcc-12.patch \
+    file://fix-build-with-binutils-2.41.patch \
 "
 
 S = "${WORKDIR}/linux-${PV}"
@@ -38,7 +40,7 @@ KERNEL_IMAGEDEST:mipsel = "tmp"
 KERNEL_CONSOLE:mipsel = "null"
 SERIAL_CONSOLE:mipsel ?= ""
 
-KERNEL_EXTRA_ARGS:mipsel = "EXTRA_CFLAGS+=-Wno-attribute-alias EXTRA_CFLAGS+=-Wno-address EXTRA_CFLAGS+=-Wno-array-bounds"
+KERNEL_EXTRA_ARGS:mipsel = "EXTRA_CFLAGS=-Wno-attribute-alias"
 
 # Replaced by kernel_output_dir
 KERNEL_OUTPUT:mipsel = "vmlinux.gz"

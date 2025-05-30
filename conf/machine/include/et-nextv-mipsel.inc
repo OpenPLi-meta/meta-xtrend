@@ -1,4 +1,4 @@
-IMAGE_FSTYPES ?= "ubi"
+IMAGE_FSTYPES += "ubi"
 UBI_VOLNAME = "rootfs"
 
 TARGET_ARCH = "mipsel"
@@ -41,12 +41,13 @@ IMAGEVERSION[vardepsexclude] = "DATE"
 IMAGEDIR ?= "${MACHINE}"
 IMGDEPLOYDIR ?= "${DEPLOY_DIR_IMAGE}"
 
-IMAGE_CMD:ubifs:prepend = " \
-	rm -rf ${IMAGE_ROOTFS}/boot/*; \
-	rm -rf ${IMAGE_ROOTFS}/tmp/*; \
-	"
+# MIPSEL
+IMAGE_CMD:ubifs:prepend:mipsel = " \
+    rm -Rf ${IMAGE_ROOTFS}/boot/*; \
+    rm -Rf ${IMAGE_ROOTFS}/tmp/*; \
+    "
 
-IMAGE_CMD:ubi:append = " \
+IMAGE_CMD:ubi:append:mipsel = " \
 	mkdir -p ${IMGDEPLOYDIR}/${IMAGEDIR}; \
 	cp ${IMGDEPLOYDIR}/${IMAGE_NAME}.ubi ${IMGDEPLOYDIR}/${IMAGEDIR}/rootfs.bin; \
 	gzip -9c ${DEPLOY_DIR_IMAGE}/vmlinux-${MACHINE}.bin > ${IMGDEPLOYDIR}/${IMAGEDIR}/kernel.bin; \
@@ -57,4 +58,3 @@ IMAGE_CMD:ubi:append = " \
 	rm -Rf ${IMAGEDIR}; \
 	rm -Rf ${IMGDEPLOYDIR}/boot; \
 	"
-

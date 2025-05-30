@@ -52,11 +52,7 @@ SRC_URI = "http://downloads.openpli.org/archive/xtrend/linux-${PV}-${ARCH}.tar.g
 	file://rtl8187se-fix-warnings.patch \
 	file://em28xx-dvb-enable-LNA-by-default-for-PCTV290e.patch \
 	file://zl10353-output-full-range-SNR.patch \
-	file://kernel-add-support-for-gcc5.patch \
-	file://kernel-add-support-for-gcc6.patch \
-	file://kernel-add-support-for-gcc7.patch \
-	file://kernel-add-support-for-gcc8.patch \
-	file://kernel-add-support-for-gcc9.patch \
+	file://build-with-gcc12-fixes.patch \
 	file://stv0900-Multistream-support.patch \
 	file://0001-STV-Add-PLS-support.patch \
 	file://0001-STV-Add-SNR-Signal-report-parameters.patch \
@@ -68,6 +64,7 @@ SRC_URI = "http://downloads.openpli.org/archive/xtrend/linux-${PV}-${ARCH}.tar.g
 	file://0003-log2-give-up-on-gcc-constant-optimizations.patch \
 	file://add-attributes-fix-modules-compile.patch \
 	file://makefile-silence-warnings.patch \
+	file://fix-build-with-binutils3-2.41.patch \
 	"
 
 S = "${WORKDIR}/linux-${PV}"

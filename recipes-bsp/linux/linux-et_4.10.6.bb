@@ -25,6 +25,7 @@ RPROVIDES_${KERNEL_PACKAGE_NAME}-image = "kernel-image-${KERNEL_VERSION}"
 SRC_URI = "http://downloads.openpli.org/archive/xtrend/linux-${PV}-${ARCH}.tar.gz;name=${ARCH} \
 	file://0001-genet1-1000mbit.patch \
 	file://bcmgenet_phyaddr.patch \
+	file://noforce_correct_pointer_usage.patch \
 	file://defconfig \
 "
 
